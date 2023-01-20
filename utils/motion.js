@@ -180,3 +180,16 @@ export const footerVariants = {
     },
   },
 };
+
+export const heroDText = {
+  hidden: {
+    width: 110,
+  },
+  show: {
+    width: 212,
+    transition:{
+      duration:.2,
+      delay:3,
+    }
+  },
+};
