@@ -183,13 +183,14 @@ export const footerVariants = {
 
 export const heroDText = {
   hidden: {
-    width: 110,
+    width: 100,
   },
   show: {
-    width: 212,
+    width: 180,
     transition:{
       duration:.2,
-      delay:3,
+      delay:2,
+      type:"spring"
     }
   },
 };
