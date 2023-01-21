@@ -187,10 +187,10 @@ export const heroDText = {
   },
   show: {
     width: 180,
-    transition:{
-      duration:.2,
-      delay:2,
-      type:"spring"
-    }
+    transition: {
+      duration: 0.2,
+      delay: 2,
+      type: "spring",
+    },
   },
 };
