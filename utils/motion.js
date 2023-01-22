@@ -194,3 +194,17 @@ export const heroDText = {
     },
   },
 };
+
+export const footerLine = (width) => ({
+  hidden: {
+    width: 0,
+  },
+  show: {
+    width: width,
+    transition: {
+      duration: 0.4,
+      delay: 1,
+      type: "spring",
+    },
+  },
+});
