@@ -36,7 +36,7 @@ const Explore = () => {
               <br className="md:block hidden" /> to explore{" "}
             </>
           }
-          textStyles="text-center   "
+          textStyles="text-center"
         />
 
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
@@ -46,7 +46,7 @@ const Explore = () => {
               {...world}
               index={index}
               active={active}
-              handleClick={setActive}
+              handleClick={handleClick}
             />
           ))}
         </div>

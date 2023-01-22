@@ -1,8 +1,50 @@
-'use client';
+"use client";
+
+import { motion } from "framer-motion";
+import { staggerContainer, fadeIn, planetVariants } from "../utils/motion";
+import { StartSteps, TitleText, TypingText } from "../components";
+import { startingFeatures } from "../constants";
+import styles from "../styles";
 
 const GetStarted = () => (
-  <section>
-    Get Started Section
+  <section className={`${styles.paddings} relative z-10`}>
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{
+        once: false,
+        amount: 0.25,
+      }}
+      className={`${styles.innerWidth} mx-auto flex items-center lg:flex-row flex-col gap-8`}
+    >
+      <motion.div
+        variants={planetVariants("left")}
+        initial={"hidden"}
+        whileInView="show"
+        className={`flex-1 ${styles.flexCenter}`}
+      >
+        <img
+          src="/get-started.png"
+          alt="get-started"
+          className="w-[90%] h-[90%]"
+        />
+      </motion.div>
+
+      <motion.div
+        variants={fadeIn("left", "tween", 0.2, 1)}
+        className={`flex-[.75] flex justify-center flex-col`}
+      >
+        <TypingText title="| How Metaversus Works" />
+        <TitleText title={<>Get Started with just a few clicks</>} />
+
+        <div className="mt-[31px] flex flex-col max-w-[370px] gap-[24px]">
+          {startingFeatures.map((item, index) => (
+            <StartSteps key={item} number={index + 1} text={item} />
+          ))}
+        </div>
+      </motion.div>
+    </motion.div>
   </section>
 );
 
