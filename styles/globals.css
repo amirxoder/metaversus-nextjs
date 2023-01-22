@@ -105,3 +105,9 @@
   background: #65c4fa;
   filter: blur(150px);
 }
+
+.glow {
+  -webkit-box-shadow:0px 0px 144px 58px rgba(46,182,255,0.44);
+  -moz-box-shadow: 0px 0px 144px 58px rgba(46,182,255,0.44);
+  box-shadow: 0px 0px 144px 58px rgba(46,182,255,0.44);
+}
